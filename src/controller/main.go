@@ -8,7 +8,7 @@ import (
 	"stegano-med-encryption-service/src/types"
 )
 
-func Route(r gin.Engine) {
+func Route(r *gin.Engine) {
 	r.POST("/encode", func(c *gin.Context) {
 		var json types.Encryption
 		err := c.BindJSON(&json)
